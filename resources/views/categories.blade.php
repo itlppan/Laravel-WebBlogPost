@@ -4,20 +4,25 @@
 @section('container')
 <h1 class="text-center">Post Category</h1>
 
-    <div class="container">
-        <div class="row">
-            @foreach ($categories as $category )
-            <div class="col-md-4 mb-4">
-                <a href="/categories/{{ $category->slug }}">
-                <div class="card text-bg-dark">
-                    <img src="https://placehold.co/500x500/png" class="card-img" alt="...">
-                    <div class="card-img-overlay d-flex align-items-center p-0">
-                      <h5 class="card-title text-center flex-fill p-4 fs-3" style="background-color: rgb(0, 0, 0, 0.6)">{{ $category->name}}</h5>
+<div class="container mx-auto mt-10 flex justify-center">
+    <div class="flex flex-wrap justify-center">
+        @foreach ($categories as $category)
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex justify-center">
+            <div class="card w-full bg-base-100 shadow-xl image-full">
+                <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title text-center">{{ $category->name }}</h2>
+                    <p>Select posts according to the post category you are looking for</p>
+                    <div class="card-actions justify-end">
+                        <a href="/categories/{{ $category->slug }}" class="btn btn-primary">View All Posts</a>
                     </div>
-                  </div>
-                </a>
+                </div>
             </div>
-            @endforeach
         </div>
+        @endforeach
     </div>
+</div>
+
+
+
 @endsection('container')

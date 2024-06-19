@@ -10,7 +10,7 @@
         </article class="my-3 fs-5">
             {!! $post->body !!}
             <article>
-            <a href="/posts">Back To Post</a>
+            <a href="/posts" class="text-sky-400 after:content-['_↗'] ... hover:text-sky-700">Back To Post</a>
         </div>
     </div>
 </div>
